@@ -4,18 +4,24 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const VENDOR_LIBS = [
-  'react',
-  'react-dom',
+  '@reduxjs/toolkit',
+  'axios',
   'bootstrap',
+  'classnames',
   // 'font-awesome',
+  'formik',
   'jquery',
   'popper.js',
-  'redux',
-  'redux-saga',
-  'react-router-dom',
-  'axios',
-  'react-redux',
   'query-string',
+  'react',
+  'react-dom',
+  'react-redux',
+  'react-router-dom',
+  'react-select',
+  'reactstrap',
+  'redux-saga',
+  'sweetalert',
+  'yup',
 ];
 
 module.exports = {
