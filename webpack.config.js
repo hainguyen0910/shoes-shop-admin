@@ -1,7 +1,7 @@
+const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const webpack = require('webpack');
 
 const VENDOR_LIBS = [
   'react',
@@ -13,6 +13,9 @@ const VENDOR_LIBS = [
   'redux',
   'redux-saga',
   'react-router-dom',
+  'axios',
+  'react-redux',
+  'query-string',
 ];
 
 module.exports = {
