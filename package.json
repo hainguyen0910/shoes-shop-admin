@@ -10,7 +10,7 @@
     "build": "npm run clean && webpack",
     "start": "webpack serve",
     "linting": "eslint src",
-    "prettier": "prettier \"src/**/*.{js,css}\"",
+    "prettier": "prettier \"src/**/*.{js,css,jsx,scss}\"",
     "format": "npm run prettier -- --write"
   },
   "eslintConfig": {
