@@ -1,19 +1,28 @@
 import React from 'react';
 import { Provider } from 'react-redux';
+import { Switch, Route, Link } from 'react-router-dom';
+import { ConnectedRouter as Router } from 'connected-react-router';
 import store from 'Redux/store';
+import { ADMIN_ROUTER } from './routes';
 
-import Img1 from 'Assets/img/avatar.jpg';
-import Img2 from 'Assets/img/carousel1.jpg';
 import './style.scss';
+import { history } from './redux/store';
 
 function App() {
   return (
     <Provider store={store}>
-      <div className="test">
-        Admin paged
-        <img src={Img1} alt="" />
-        <img src={Img2} alt="" />
-      </div>
+      <Router history={history}>
+        <Switch>
+          {ADMIN_ROUTER.map((route, index) => (
+            <Route
+              key={index}
+              path={route.path}
+              exact={route.exact}
+              component={route.component}
+            />
+          ))}
+        </Switch>
+      </Router>
     </Provider>
   );
 }

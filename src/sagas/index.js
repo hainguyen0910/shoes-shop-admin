@@ -1,7 +1,8 @@
 import 'regenerator-runtime/runtime';
+import authSaga from './auth';
 
 function* rootSaga() {
-  // yield console.log(123);
+  yield* authSaga();
 }
 
 export default rootSaga;

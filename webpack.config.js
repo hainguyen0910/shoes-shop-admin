@@ -12,6 +12,7 @@ const VENDOR_LIBS = [
   'axios',
   'bootstrap',
   'classnames',
+  'connected-react-router',
   // 'font-awesome',
   'formik',
   'jquery',
