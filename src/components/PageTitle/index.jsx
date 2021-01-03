@@ -4,7 +4,6 @@ import './style.scss';
 
 function index(props) {
   const { title, icon, subtitle, actions } = props;
-  console.log(actions);
   return (
     <div className="app-page-title">
       <div className="page-title-wrapper">

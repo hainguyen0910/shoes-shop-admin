@@ -1,0 +1,52 @@
+@import 'assets/styles/helpers/variables';
+
+.overview-chart {
+  width: 50%;
+  background-color: $white-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0.46875rem 2.1875rem rgba(4, 9, 20, 0.03),
+    0 0.9375rem 1.40625rem rgba(4, 9, 20, 0.03),
+    0 0.25rem 0.53125rem rgba(4, 9, 20, 0.05),
+    0 0.125rem 0.1875rem rgba(4, 9, 20, 0.03);
+  padding: 1rem;
+}
+.main-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0.46875rem 2.1875rem rgba(4, 9, 20, 0.03),
+    0 0.9375rem 1.40625rem rgba(4, 9, 20, 0.03),
+    0 0.25rem 0.53125rem rgba(4, 9, 20, 0.05),
+    0 0.125rem 0.1875rem rgba(4, 9, 20, 0.03);
+  margin-left: 5rem !important;
+}
+
+.title-chart-order {
+  font-size: $fs-3;
+  font-weight: bold;
+  // opacity: 0.9;
+  color: $lightSlate-gray-color;
+}
+
+.order-about-icon {
+  width: 12px;
+  height: 12px;
+  filter: invert(74%) sepia(33%) saturate(0%) hue-rotate(170deg)
+    brightness(106%) contrast(89%);
+}
+
+.left-cards {
+  border-right: 1px solid $gray-color;
+}
+
+.card-box-1,
+.card-box-3 {
+  border-bottom: 1px solid $gray-color;
+}
+
+// .card-box {
+//   width: 400px;
+// }
