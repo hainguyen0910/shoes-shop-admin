@@ -1,0 +1,45 @@
+@import 'assets/styles/helpers/variables';
+
+.app-page-title {
+  padding-bottom: 2rem;
+  border-bottom: 1px solid $gray-color;
+}
+
+.page-title-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-title-heading {
+  display: flex;
+  align-items: center;
+}
+
+.page-title-icon {
+  padding: 1rem;
+  margin-right: 2rem;
+  box-shadow: 0 0.46875rem 2.1875rem rgba(4, 9, 20, 0.03),
+    0 0.9375rem 1.40625rem rgba(4, 9, 20, 0.03),
+    0 0.25rem 0.53125rem rgba(4, 9, 20, 0.05),
+    0 0.125rem 0.1875rem rgba(4, 9, 20, 0.03);
+  border-radius: 0.25rem;
+  background-color: $white-color;
+  img {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+.page-title {
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  text-align: left;
+}
+.page-title-subheading {
+  padding: 3px 0 0;
+  font-size: 0.88rem;
+  opacity: 0.6;
+}

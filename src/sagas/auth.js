@@ -1,8 +1,8 @@
-import { takeLatest, call, put, select } from 'redux-saga/effects';
 import authApi from 'Api/auth';
+import { push } from 'connected-react-router';
+import { call, put, takeLatest } from 'redux-saga/effects';
 import * as authSlice from 'Slices/auth';
 import swal from 'sweetalert';
-import { push } from 'connected-react-router';
 
 function* login({ payload }) {
   try {
