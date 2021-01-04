@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
 import Tooltip from 'Components/Tooltip';
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 import './style.scss';
 
 function index(props) {
-  const { menu } = props;
-  const [isActiveNavbar, setIsActiveNavbar] = useState(false);
+  const { menu, isExpanded, setIsExpanded } = props;
 
   const renderMenu = (_menu) => {
     let xhtml = null;
@@ -26,16 +25,14 @@ function index(props) {
 
   return (
     <div
-      className={`left-sidebar d-flex flex-column ${
-        isActiveNavbar && 'expanded'
-      }`}
+      className={`left-sidebar d-flex flex-column ${isExpanded && 'expanded'}`}
     >
       <button
         className={`hamburger w-25 hamburger--elastic ${
-          isActiveNavbar && 'is-active'
+          isExpanded && 'is-active'
         }`}
         type="button"
-        onClick={() => setIsActiveNavbar(!isActiveNavbar)}
+        onClick={() => setIsExpanded(!isExpanded)}
       >
         <span className="hamburger-box">
           <span className="hamburger-inner" />

@@ -4,12 +4,14 @@ import { createBrowserHistory } from 'history';
 import createSagaMiddleware from 'redux-saga';
 import rootSaga from 'Sagas';
 import authSlice from 'Slices/auth';
+import uiSlice from 'Slices/ui';
 
 export const history = createBrowserHistory();
 
 const rootReducer = {
   router: connectRouter(history),
   auth: authSlice,
+  ui: uiSlice,
 };
 const sagaMiddleware = createSagaMiddleware();
 const middleware = [

@@ -72,7 +72,7 @@ function index() {
             <span className="title-chart-overview d-flex align-items-center">
               <span className="mr-2 title-chart-order">Order</span>
               <Tooltip
-                content="This is a descriptive chart of order status by week, month or year"
+                content="This is a descriptive chart of order status by week, month or year."
                 position="right"
               >
                 <img src={aboutIcon} alt="" className="order-about-icon" />
@@ -95,60 +95,96 @@ function index() {
                 display: true,
                 position: 'bottom',
               },
-              scales: {
-                xAxes: [
-                  {
-                    display: false,
-                  },
-                ],
-                yAxes: [
-                  {
-                    display: false,
-                  },
-                ],
-              },
-              // responsive: true,
+              // scales: {
+              //   xAxes: [
+              //     {
+              //       display: false,
+              //     },
+              //   ],
+              //   yAxes: [
+              //     {
+              //       display: false,
+              //     },
+              //   ],
+              // },
+              responsive: true,
               maintainAspectRatio: false,
+              aspectRatio: 1,
+              tooltips: {
+                mode: 'x',
+              },
+              plugins: {
+                datalabels: {
+                  display: 'auto',
+                  color: 'black',
+                  align: 'top',
+                },
+              },
             }}
           />
         </div>
-        <div className="main-card bg-white">
-          <div className="left-cards">
-            <div className="card-box card-box-1">
-              <CardOverview
-                icon={sneakersIcon}
-                stats={{ stat: '40,5k', percent: 175.5 }}
-                title="Sold"
-                content="NIKE AIR JORDAN 1 LOW X DIOR GREY"
-                trend="stat-compare"
-              />
-            </div>
-            <div className="card-box card-box-2">
-              <CardOverview
-                icon={focusIcon}
-                stats={{ stat: '40,5k', percent: 175.5 }}
-                title="Views"
-                content="NIKE AIR JORDAN 1 LOW X DIOR GREY"
-                trend="stat-up"
-              />
-            </div>
+        <div className="main-card bg-white d-flex flex-column justify-content-between align-items-center w-50">
+          <div className="product-overview mb-5 w-100 d-flex justify-content-between align-items-center">
+            <span className="title-chart-overview d-flex align-items-center">
+              <span className="mr-2 title-chart-order">Product</span>
+              <Tooltip
+                content="Here's a quick overview of popular products for the week, month or year."
+                position="right"
+              >
+                <img src={aboutIcon} alt="" className="order-about-icon" />
+              </Tooltip>
+            </span>
+            <Select
+              options={optionsSelect}
+              className="w-25"
+              defaultValue={optionsSelect[0]}
+              // onChange={handleOnChangType}
+            />
           </div>
-          <div className="right-cards">
-            <div className="card-box card-box-3">
-              <CardOverview
-                icon={soldIcon}
-                stats={{ stat: '40,5k', percent: 175.5 }}
-                title="Views"
-                trend="stat-up"
-              />
+          <div className="d-flex w-100">
+            <div className="left-cards w-50">
+              <div className="card-box card-box-1 w-100 d-flex justify-content-between align-items-center">
+                <CardOverview
+                  icon={sneakersIcon}
+                  stats={{ stat: '40,5k', percent: 175.5 }}
+                  title="Sold"
+                  content="NIKE AIR JORDAN 1 LOW X DIOR GREY"
+                  trend="stat-compare"
+                  color="primary"
+                />
+              </div>
+              <div className="card-box card-box-2 w-100 d-flex justify-content-between align-items-center">
+                <CardOverview
+                  icon={focusIcon}
+                  stats={{ stat: '40,5k', percent: 175.5 }}
+                  title="Views"
+                  content="NIKE AIR JORDAN 1 LOW X DIOR GREY"
+                  trend="stat-up"
+                  color="danger"
+                />
+              </div>
             </div>
-            <div className="card-box card-box-4">
-              <CardOverview
-                icon={monitorIcon}
-                stats={{ stat: '40,5k', percent: 175.5 }}
-                title="Sold"
-                trend="stat-down"
-              />
+            <div className="right-cards w-50">
+              <div className="card-box card-box-3 w-100 d-flex justify-content-between align-items-center">
+                <CardOverview
+                  icon={soldIcon}
+                  stats={{ stat: '40,5k', percent: 175.5 }}
+                  title="Sold"
+                  content="Total"
+                  trend="stat-up"
+                  color="success"
+                />
+              </div>
+              <div className="card-box card-box-4 w-100 d-flex justify-content-between align-items-center">
+                <CardOverview
+                  icon={monitorIcon}
+                  stats={{ stat: '40,5k', percent: 175.5 }}
+                  title="Views"
+                  content="Total"
+                  trend="stat-down"
+                  color="warning"
+                />
+              </div>
             </div>
           </div>
         </div>

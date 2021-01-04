@@ -21,6 +21,7 @@
     "axios": "^0.21.1",
     "bootstrap": "^4.5.3",
     "chart.js": "^2.9.4",
+    "chartjs-plugin-datalabels": "^0.7.0",
     "classnames": "^2.2.6",
     "connected-react-router": "^6.8.0",
     "font-awesome": "^4.7.0",

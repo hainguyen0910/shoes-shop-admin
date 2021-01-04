@@ -15,6 +15,7 @@
       content: '';
       position: absolute;
     }
+    z-index: 9999;
   }
   .tooltip-content.top {
     bottom: 100%;

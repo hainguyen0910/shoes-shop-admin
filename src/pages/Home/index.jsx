@@ -2,7 +2,7 @@ import Footer from 'Components/Footer';
 import Navbar from 'Components/Navbar';
 import Sidebar from 'Components/Sidebar';
 import Overview from 'Components/Overview';
-import React from 'react';
+import React, { useState } from 'react';
 import homeIcon from 'Assets/img/home.svg';
 
 import './style.scss';
@@ -38,12 +38,18 @@ const menuList = [
 function index() {
   const isAuth = JSON.parse(localStorage.getItem('isAuth'));
 
+  const [isExpanded, setIsExpanded] = useState(false);
+
   return (
     <div className="home">
       <Navbar />
       <div className="sidebar-main-app">
-        <Sidebar menu={menuList} />
-        <div className="container-footer">
+        <Sidebar
+          menu={menuList}
+          isExpanded={isExpanded}
+          setIsExpanded={setIsExpanded}
+        />
+        <div className={`container-footer ${isExpanded && 'is-expanded'}`}>
           <Overview />
           <Footer />
         </div>

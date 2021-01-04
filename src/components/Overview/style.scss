@@ -5,7 +5,7 @@
   background-color: $white-color;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   box-shadow: 0 0.46875rem 2.1875rem rgba(4, 9, 20, 0.03),
     0 0.9375rem 1.40625rem rgba(4, 9, 20, 0.03),
@@ -50,3 +50,7 @@
 // .card-box {
 //   width: 400px;
 // }
+
+.product-overview {
+  padding: 1rem !important;
+}
