@@ -9,7 +9,7 @@ function index(props) {
   const renderMenu = (_menu) => {
     let xhtml = null;
     xhtml = _menu.map((item, index1) => (
-      <Tooltip key={index1} content="hello" position="bottom">
+      <Tooltip key={index1} content="hello" position="right">
         <NavLink
           className="menu-item d-flex align-items-center p-1 mt-2 btn 123"
           activeClassName="active"
