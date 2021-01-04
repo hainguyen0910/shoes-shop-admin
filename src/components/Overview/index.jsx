@@ -8,6 +8,7 @@ import OrderChart from 'Components/OrderChart';
 import PageTitle from 'Components/PageTitle';
 import Tooltip from 'Components/Tooltip';
 import CardOverview from 'Components/CardOverview';
+import SimpleCard from 'Components/SimpleCard';
 import React from 'react';
 import Select from 'react-select';
 
@@ -50,9 +51,11 @@ const dataset = {
 };
 
 const optionsSelect = [
+  { value: 'today', label: 'Today' },
   { value: 'week', label: 'Week' },
   { value: 'month', label: 'Month' },
   { value: 'year', label: 'Year' },
+  { value: 'all', label: 'All' },
 ];
 
 function index() {
@@ -187,6 +190,68 @@ function index() {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      <div className="card-revenue d-flex flex-column">
+        <span className="title-chart-overview d-flex align-items-center mb-3">
+          <span className="mr-2 title-chart-order">Revenue</span>
+          <Tooltip
+            content="This is a descriptive of revenue's shop is today."
+            position="right"
+          >
+            <img src={aboutIcon} alt="" className="order-about-icon" />
+          </Tooltip>
+        </span>
+        <div className="d-flex">
+          <SimpleCard
+            title="Orders Delivered"
+            subtitle="Today"
+            stat={1896}
+            color="success"
+          />
+          <SimpleCard
+            title="Revenue"
+            subtitle="Today"
+            stat="$ 18M"
+            color="warning"
+          />
+          <SimpleCard
+            title="Orders Canceled "
+            subtitle="Today"
+            stat={186}
+            color="danger"
+          />
+        </div>
+      </div>
+      <div className="card-revenue d-flex flex-column">
+        <span className="title-chart-overview d-flex align-items-center mb-3">
+          <span className="mr-2 title-chart-order">Messages</span>
+          <Tooltip
+            content="This is a descriptive of messages and its status by week, month or year."
+            position="right"
+          >
+            <img src={aboutIcon} alt="" className="order-about-icon" />
+          </Tooltip>
+        </span>
+        <div className="d-flex">
+          <SimpleCard
+            title="New Messages"
+            subtitle="Today"
+            stat={1896}
+            color="success"
+          />
+          <SimpleCard
+            title="Total Messages"
+            subtitle="Today"
+            stat="18M"
+            color="warning"
+          />
+          <SimpleCard
+            title="Unread Messages"
+            subtitle="Today"
+            stat={186}
+            color="danger"
+          />
         </div>
       </div>
     </div>

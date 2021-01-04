@@ -1,0 +1,21 @@
+@import 'assets/styles/helpers/variables';
+
+.widget-content {
+  .widget-numbers {
+    font-weight: bold;
+    font-size: 1.8rem;
+    display: block;
+  }
+
+  .widget-content-left {
+    .widget-heading {
+      color: $text-color-1;
+      opacity: 0.8;
+      font-weight: bold;
+    }
+    .widget-subheading {
+      color: $text-color-1;
+      opacity: 0.5;
+    }
+  }
+}
