@@ -1,7 +1,10 @@
 {
     "cSpell.words": [
         "Formik",
+        "Hocs",
         "chartjs",
+        "datalabels",
+        "reduxjs",
         "swal",
         "sweetalert"
     ]

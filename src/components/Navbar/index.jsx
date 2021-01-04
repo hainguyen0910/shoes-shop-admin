@@ -6,7 +6,6 @@ import './style.scss';
 
 function index() {
   const [isActive, setIsActive] = useState(false);
-  const [isActiveNavbar, setIsActiveNavbar] = useState(false);
 
   return (
     <div className="navbar-wrapper p-1">
