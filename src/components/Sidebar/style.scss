@@ -122,3 +122,15 @@
     background-color: $button-hover-color;
   }
 }
+
+.hamburger.is-active {
+  width: 100% !important;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 1rem;
+}
+
+.hamburger {
+  transition: all 0.5s;
+}

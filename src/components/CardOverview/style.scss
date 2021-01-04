@@ -1,0 +1,85 @@
+@import 'assets/styles/helpers/variables';
+
+.icon-card {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background-color: rgba(64, 158, 255, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 2rem;
+    height: 2rem;
+    filter: invert(49%) sepia(95%) saturate(1142%) hue-rotate(188deg)
+      brightness(100%) contrast(103%);
+  }
+}
+
+.stat {
+  font-weight: bold;
+  font-size: 2.5rem;
+  color: $text-color-1;
+}
+
+.content-card {
+  color: $text-color-1;
+  opacity: 0.8;
+}
+
+.content-card {
+  font-weight: 500;
+  text-align: center;
+}
+
+.card-wrapper {
+  transition: all 0.3s;
+  width: 400px;
+  justify-content: space-between !important;
+  &:hover {
+    transform: scale(1.2);
+    border: none;
+    background-color: $white-color;
+    box-shadow: 0 0.46875rem 2.1875rem rgba(4, 9, 20, 0.03),
+      0 0.9375rem 1.40625rem rgba(4, 9, 20, 0.03),
+      0 0.25rem 0.53125rem rgba(4, 9, 20, 0.05),
+      0 0.125rem 0.1875rem rgba(4, 9, 20, 0.03);
+    transition: all 0.3s;
+  }
+}
+
+.stat-percent {
+  img {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+.title-stat {
+  color: $text-color-1;
+  opacity: 0.6;
+}
+
+.stat-compare {
+  color: $warning-color;
+  img {
+    filter: invert(69%) sepia(94%) saturate(2405%) hue-rotate(3deg)
+      brightness(104%) contrast(113%);
+  }
+}
+
+.stat-up {
+  color: $success-color;
+  img {
+    filter: invert(50%) sepia(79%) saturate(398%) hue-rotate(58deg)
+      brightness(96%) contrast(85%);
+  }
+}
+
+.stat-down {
+  color: $danger-color;
+  img {
+    filter: invert(22%) sepia(37%) saturate(6686%) hue-rotate(333deg)
+      brightness(90%) contrast(89%);
+  }
+}
