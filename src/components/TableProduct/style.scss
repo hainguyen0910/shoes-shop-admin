@@ -1,0 +1,44 @@
+@import 'assets/styles/helpers/variables';
+
+.table-product-list {
+  padding: 1rem 0;
+  .title-table-icon {
+    width: 24px;
+    height: 24px;
+    filter: invert(49%) sepia(95%) saturate(1142%) hue-rotate(188deg)
+      brightness(100%) contrast(103%);
+  }
+  .title-table {
+    padding: 0 1rem;
+    padding-bottom: 2rem;
+    span {
+      font-size: $fs-3;
+      font-weight: bold;
+      color: $lightSlate-gray-color;
+    }
+  }
+  .table {
+    margin: 2rem 0;
+    color: $text-color-1 !important;
+    tr.even {
+      background-color: #eee;
+    }
+    tr {
+      &:hover {
+        background-color: #e0f3ff;
+      }
+    }
+    tbody,
+    thead {
+      tr {
+        padding: 0 !important;
+        margin: 0.75rem !important;
+        border-left: 1px solid #e1e5e8;
+        border-right: 1px solid #e1e5e8;
+        &:last-child {
+          border-bottom: 1px solid #e1e5e8;
+        }
+      }
+    }
+  }
+}

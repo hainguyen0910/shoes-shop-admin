@@ -27,7 +27,6 @@
 .title-chart-order {
   font-size: $fs-3;
   font-weight: bold;
-  // opacity: 0.9;
   color: $lightSlate-gray-color;
 }
 
@@ -58,6 +57,41 @@
   padding: 1rem !important;
   margin-top: 2rem;
   background-color: $white-color;
+  box-shadow: 0 0.46875rem 2.1875rem rgba(4, 9, 20, 0.03),
+    0 0.9375rem 1.40625rem rgba(4, 9, 20, 0.03),
+    0 0.25rem 0.53125rem rgba(4, 9, 20, 0.05),
+    0 0.125rem 0.1875rem rgba(4, 9, 20, 0.03);
+}
+
+.view-detail-table-product {
+  .arrow {
+    border: solid $white-color;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+  }
+
+  .right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+  .btn-view-detail {
+    background-color: $primary-color;
+    color: $white-color;
+    transition: all 0.3s;
+    &:hover {
+      color: $white-color;
+      transform: scale(1.1);
+      box-shadow: 0 0.46875rem 2.1875rem rgba(4, 9, 20, 0.03),
+        0 0.9375rem 1.40625rem rgba(4, 9, 20, 0.03),
+        0 0.25rem 0.53125rem rgba(4, 9, 20, 0.05),
+        0 0.125rem 0.1875rem rgba(4, 9, 20, 0.03);
+      transition: all 0.3s;
+    }
+  }
+}
+
+.table-wrapper {
   box-shadow: 0 0.46875rem 2.1875rem rgba(4, 9, 20, 0.03),
     0 0.9375rem 1.40625rem rgba(4, 9, 20, 0.03),
     0 0.25rem 0.53125rem rgba(4, 9, 20, 0.05),

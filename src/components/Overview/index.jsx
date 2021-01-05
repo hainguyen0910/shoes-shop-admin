@@ -3,12 +3,14 @@ import portraitIcon from 'Assets/img/portrait.svg';
 import monitorIcon from 'Assets/img/monitor.svg';
 import focusIcon from 'Assets/img/focus.svg';
 import sneakersIcon from 'Assets/img/sneakers.svg';
+import billIcon from 'Assets/img/bill.svg';
 import soldIcon from 'Assets/img/sold.svg';
 import OrderChart from 'Components/OrderChart';
 import PageTitle from 'Components/PageTitle';
 import Tooltip from 'Components/Tooltip';
 import CardOverview from 'Components/CardOverview';
 import SimpleCard from 'Components/SimpleCard';
+import TableProduct from 'Components/TableProduct';
 import React from 'react';
 import Select from 'react-select';
 
@@ -56,6 +58,89 @@ const optionsSelect = [
   { value: 'month', label: 'Month' },
   { value: 'year', label: 'Year' },
   { value: 'all', label: 'All' },
+];
+
+const dataTable = [
+  {
+    name: 'Airi Satou',
+    brand: 'Nike',
+    price: '3000000 VNĐ',
+    among: 3,
+    orderDate: '12/10/2020',
+    totalPrice: '900000000 VNĐ',
+  },
+  {
+    name: 'Airi Satou',
+    brand: 'Nike',
+    price: '3000000 VNĐ',
+    among: 3,
+    orderDate: '12/10/2020',
+    totalPrice: '900000000 VNĐ',
+  },
+  {
+    name: 'Airi Satou',
+    brand: 'Nike',
+    price: '3000000 VNĐ',
+    among: 3,
+    orderDate: '12/10/2020',
+    totalPrice: '900000000 VNĐ',
+  },
+  {
+    name: 'Airi Satou',
+    brand: 'Nike',
+    price: '3000000 VNĐ',
+    among: 3,
+    orderDate: '12/10/2020',
+    totalPrice: '900000000 VNĐ',
+  },
+  {
+    name: 'Airi Satou',
+    brand: 'Nike',
+    price: '3000000 VNĐ',
+    among: 3,
+    orderDate: '12/10/2020',
+    totalPrice: '900000000 VNĐ',
+  },
+  {
+    name: 'Airi Satou',
+    brand: 'Nike',
+    price: '3000000 VNĐ',
+    among: 3,
+    orderDate: '12/10/2020',
+    totalPrice: '900000000 VNĐ',
+  },
+  {
+    name: 'Airi Satou',
+    brand: 'Nike',
+    price: '3000000 VNĐ',
+    among: 3,
+    orderDate: '12/10/2020',
+    totalPrice: '900000000 VNĐ',
+  },
+  {
+    name: 'Airi Satou',
+    brand: 'Nike',
+    price: '3000000 VNĐ',
+    among: 3,
+    orderDate: '12/10/2020',
+    totalPrice: '900000000 VNĐ',
+  },
+  {
+    name: 'Airi Satou',
+    brand: 'Nike',
+    price: '3000000 VNĐ',
+    among: 3,
+    orderDate: '12/10/2020',
+    totalPrice: '900000000 VNĐ',
+  },
+  {
+    name: 'Airi Satou',
+    brand: 'Nike',
+    price: '3000000 VNĐ',
+    among: 3,
+    orderDate: '12/10/2020',
+    totalPrice: '900000000 VNĐ',
+  },
 ];
 
 function index() {
@@ -223,6 +308,26 @@ function index() {
           />
         </div>
       </div>
+
+      <div className="bg-white table-wrapper">
+        <TableProduct
+          title="Product list sold"
+          data={dataTable}
+          iconTitle={billIcon}
+        />
+
+        <div className="view-detail-table-product pb-3 d-flex justify-content-center">
+          <div className="d-flex justify-content-center text-center rm-border w-50">
+            <button
+              className="btn btn-view-detail d-flex align-items-center justify-content-center w-25"
+              type="button"
+            >
+              View detail <i className="arrow right" />
+            </button>
+          </div>
+        </div>
+      </div>
+
       <div className="card-revenue d-flex flex-column">
         <span className="title-chart-overview d-flex align-items-center mb-3">
           <span className="mr-2 title-chart-order">Messages</span>
