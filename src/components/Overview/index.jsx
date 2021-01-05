@@ -5,12 +5,17 @@ import focusIcon from 'Assets/img/focus.svg';
 import sneakersIcon from 'Assets/img/sneakers.svg';
 import billIcon from 'Assets/img/bill.svg';
 import soldIcon from 'Assets/img/sold.svg';
+import avatar from 'Assets/img/avatar.jpg';
+
 import OrderChart from 'Components/OrderChart';
 import PageTitle from 'Components/PageTitle';
 import Tooltip from 'Components/Tooltip';
 import CardOverview from 'Components/CardOverview';
 import SimpleCard from 'Components/SimpleCard';
 import TableProduct from 'Components/TableProduct';
+import UnreadMessage from 'Components/UnreadMessage';
+import { Scrollbars } from 'react-custom-scrollbars';
+
 import React from 'react';
 import Select from 'react-select';
 
@@ -143,6 +148,119 @@ const dataTable = [
   },
 ];
 
+const messages = [
+  {
+    username: 'hainguyen0910',
+    fullname: 'Hải Nguyên',
+    avatar,
+    messages: [
+      {
+        message: 'Hello, can you give me a Nike Jordan 1?',
+        createAt: '12/10/2020 12:12:56',
+      },
+    ],
+  },
+  {
+    username: 'hainguyen0910',
+    fullname: 'Hải Nguyên',
+    avatar,
+    messages: [
+      {
+        message: 'Hello, can you give me a Nike Jordan 1?',
+        createAt: '12/10/2020 12:12:56',
+      },
+    ],
+  },
+  {
+    username: 'hainguyen0910',
+    fullname: 'Hải Nguyên',
+    avatar,
+    messages: [
+      {
+        message: 'Hello, can you give me a Nike Jordan 1?',
+        createAt: '12/10/2020 12:12:56',
+      },
+    ],
+  },
+  {
+    username: 'hainguyen0910',
+    fullname: 'Hải Nguyên',
+    avatar,
+    messages: [
+      {
+        message: 'Hello, can you give me a Nike Jordan 1?',
+        createAt: '12/10/2020 12:12:56',
+      },
+    ],
+  },
+  {
+    username: 'hainguyen0910',
+    fullname: 'Hải Nguyên',
+    avatar,
+    messages: [
+      {
+        message: 'Hello, can you give me a Nike Jordan 1?',
+        createAt: '12/10/2020 12:12:56',
+      },
+    ],
+  },
+  {
+    username: 'hainguyen0910',
+    fullname: 'Hải Nguyên',
+    avatar,
+    messages: [
+      {
+        message: 'Hello, can you give me a Nike Jordan 1?',
+        createAt: '12/10/2020 12:12:56',
+      },
+    ],
+  },
+  {
+    username: 'hainguyen0910',
+    fullname: 'Hải Nguyên',
+    avatar,
+    messages: [
+      {
+        message: 'Hello, can you give me a Nike Jordan 1?',
+        createAt: '12/10/2020 12:12:56',
+      },
+    ],
+  },
+  {
+    username: 'hainguyen0910',
+    fullname: 'Hải Nguyên',
+    avatar,
+    messages: [
+      {
+        message: 'Hello, can you give me a Nike Jordan 1?',
+        createAt: '12/10/2020 12:12:56',
+      },
+    ],
+  },
+  {
+    username: 'hainguyen0910',
+    fullname: 'Hải Nguyên',
+    avatar,
+    messages: [
+      {
+        message: 'Hello, can you give me a Nike Jordan 1?',
+        createAt: '12/10/2020 12:12:56',
+      },
+    ],
+  },
+  {
+    username: 'hainguyen0910',
+    fullname: 'Hải Nguyên',
+    avatar,
+    messages: [
+      {
+        message: 'Hello, can you give me a Nike Jordan 1?',
+        createAt: '12/10/2020 12:12:56',
+      },
+    ],
+  },
+];
+
 function index() {
   // const handleOnChangType = (selectedOption) => {};
 
@@ -199,7 +317,8 @@ function index() {
               maintainAspectRatio: false,
               aspectRatio: 1,
               tooltips: {
-                mode: 'x',
+                mode: 'index',
+                intersect: false,
               },
               plugins: {
                 datalabels: {
@@ -357,6 +476,25 @@ function index() {
             stat={186}
             color="danger"
           />
+        </div>
+      </div>
+
+      <div className="table-messages-unread-and-user-active">
+        <div className="mr-2 d-flex align-items-center ">
+          <span className="mr-2 title-chart-order">Unread Messages</span>
+          <Tooltip
+            content="This is a descriptive chart of order status by week, month or year."
+            position="right"
+          >
+            <img src={aboutIcon} alt="" className="order-about-icon" />
+          </Tooltip>
+        </div>
+        <div className="unread-messages-box w-50 mt-4">
+          <Scrollbars style={{ width: '100%', height: '400px' }}>
+            {messages.map((item, _index) => (
+              <UnreadMessage data={item} key={_index} />
+            ))}
+          </Scrollbars>
         </div>
       </div>
     </div>
