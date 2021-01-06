@@ -1,0 +1,33 @@
+@import 'assets/styles/helpers/variables';
+
+.info-top-rank {
+  margin-bottom: 0.5rem;
+  img {
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+}
+
+.bar-chart-title,
+.bar-chart-fullname {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: $fs-3;
+  color: $text-color-1;
+  opacity: 0.9;
+}
+
+.bar-chart-fullname {
+  font-size: $fs-2;
+  text-transform: capitalize;
+}
+
+.bar-chart {
+  .among-bought {
+    font-size: $fs-2;
+    font-weight: bold;
+    color: $white-color;
+  }
+}

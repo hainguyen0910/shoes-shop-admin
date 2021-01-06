@@ -14,6 +14,7 @@ import CardOverview from 'Components/CardOverview';
 import SimpleCard from 'Components/SimpleCard';
 import TableProduct from 'Components/TableProduct';
 import UnreadMessage from 'Components/UnreadMessage';
+import SingleBarRank from 'Components/SingleBarRank';
 import { Scrollbars } from 'react-custom-scrollbars';
 
 import React from 'react';
@@ -273,7 +274,7 @@ function index() {
         actions={<ButtonTest />}
       />
       <div className="tab-animation mt-5 d-flex justify-content-between">
-        <div className="overview-chart">
+        <div className="overview-chart box-shadow-light">
           <div className="title-and-select-type w-100 d-flex justify-content-between align-items-center mb-5">
             <span className="title-chart-overview d-flex align-items-center">
               <span className="mr-2 title-chart-order">Order</span>
@@ -330,7 +331,7 @@ function index() {
             }}
           />
         </div>
-        <div className="main-card bg-white d-flex flex-column justify-content-between align-items-center w-50">
+        <div className="main-card bg-white d-flex flex-column justify-content-between align-items-center w-50 box-shadow-light">
           <div className="product-overview mb-5 w-100 d-flex justify-content-between align-items-center">
             <span className="title-chart-overview d-flex align-items-center">
               <span className="mr-2 title-chart-order">Product</span>
@@ -396,7 +397,7 @@ function index() {
           </div>
         </div>
       </div>
-      <div className="card-revenue d-flex flex-column">
+      <div className="card-revenue d-flex flex-column box-shadow-light">
         <span className="title-chart-overview d-flex align-items-center mb-3">
           <span className="mr-2 title-chart-order">Revenue</span>
           <Tooltip
@@ -428,7 +429,7 @@ function index() {
         </div>
       </div>
 
-      <div className="bg-white table-wrapper">
+      <div className="bg-white table-wrapper box-shadow-light">
         <TableProduct
           title="Product list sold"
           data={dataTable}
@@ -447,7 +448,7 @@ function index() {
         </div>
       </div>
 
-      <div className="card-revenue d-flex flex-column">
+      <div className="card-revenue d-flex flex-column box-shadow-light">
         <span className="title-chart-overview d-flex align-items-center mb-3">
           <span className="mr-2 title-chart-order">Messages</span>
           <Tooltip
@@ -479,22 +480,82 @@ function index() {
         </div>
       </div>
 
-      <div className="table-messages-unread-and-user-active">
-        <div className="mr-2 d-flex align-items-center ">
-          <span className="mr-2 title-chart-order">Unread Messages</span>
-          <Tooltip
-            content="This is a descriptive chart of order status by week, month or year."
-            position="right"
-          >
-            <img src={aboutIcon} alt="" className="order-about-icon" />
-          </Tooltip>
+      <div className="table-messages-unread-and-user-active d-flex">
+        <div className="w-50 box-shadow-light bg-white">
+          <div className="mr-2 d-flex align-items-center justify-content-between">
+            <span className="d-flex align-items-center">
+              <span className="mr-2 title-chart-order">Unread Messages</span>
+              <Tooltip
+                content="This is a descriptive chart of order status by week, month or year."
+                position="right"
+              >
+                <img src={aboutIcon} alt="" className="order-about-icon" />
+              </Tooltip>
+            </span>
+            <Select
+              options={optionsSelect}
+              className="w-25"
+              defaultValue={optionsSelect[0]}
+              // onChange={handleOnChangType}
+            />
+          </div>
+
+          <div className="unread-messages-box mt-4">
+            <Scrollbars style={{ width: '100%', height: '400px' }}>
+              {messages.map((item, _index) => (
+                <UnreadMessage data={item} key={_index} />
+              ))}
+            </Scrollbars>
+          </div>
         </div>
-        <div className="unread-messages-box w-50 mt-4">
-          <Scrollbars style={{ width: '100%', height: '400px' }}>
-            {messages.map((item, _index) => (
-              <UnreadMessage data={item} key={_index} />
-            ))}
-          </Scrollbars>
+
+        <div className="w-50 ml-5 box-shadow-light bg-white">
+          <div className="mr-2 d-flex align-items-center justify-content-between">
+            <span className="d-flex align-items-center">
+              <span className="mr-2 title-chart-order">Best Buyer</span>
+              <Tooltip
+                content="This is a descriptive chart of order status by week, month or year."
+                position="right"
+              >
+                <img src={aboutIcon} alt="" className="order-about-icon" />
+              </Tooltip>
+            </span>
+            <Select
+              options={optionsSelect}
+              className="w-25"
+              defaultValue={optionsSelect[0]}
+              // onChange={handleOnChangType}
+            />
+          </div>
+
+          <div className="top-buyer">
+            <div className="top-3 d-flex justify-content-center">
+              <SingleBarRank
+                height={150}
+                width={50}
+                color="#cce5ff"
+                data={messages[0]}
+                title="top 2"
+                count={10}
+              />
+              <SingleBarRank
+                height={200}
+                width={50}
+                color="#d4edda"
+                data={messages[0]}
+                title="top 1"
+                count={20}
+              />
+              <SingleBarRank
+                height={100}
+                width={50}
+                color="#f8d7da"
+                data={messages[0]}
+                title="top 3"
+                count={8}
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -1,5 +1,9 @@
 @import 'assets/styles/helpers/variables';
 
+.box-shadow-light {
+  box-shadow: $box-shadow-light;
+}
+
 .overview-chart {
   width: 50%;
   background-color: $white-color;
@@ -7,20 +11,12 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 0.46875rem 2.1875rem rgba(4, 9, 20, 0.03),
-    0 0.9375rem 1.40625rem rgba(4, 9, 20, 0.03),
-    0 0.25rem 0.53125rem rgba(4, 9, 20, 0.05),
-    0 0.125rem 0.1875rem rgba(4, 9, 20, 0.03);
   padding: 1rem;
 }
 .main-card {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 0.46875rem 2.1875rem rgba(4, 9, 20, 0.03),
-    0 0.9375rem 1.40625rem rgba(4, 9, 20, 0.03),
-    0 0.25rem 0.53125rem rgba(4, 9, 20, 0.05),
-    0 0.125rem 0.1875rem rgba(4, 9, 20, 0.03);
   margin-left: 5rem !important;
 }
 
@@ -57,10 +53,6 @@
   padding: 1rem !important;
   margin-top: 2rem;
   background-color: $white-color;
-  box-shadow: 0 0.46875rem 2.1875rem rgba(4, 9, 20, 0.03),
-    0 0.9375rem 1.40625rem rgba(4, 9, 20, 0.03),
-    0 0.25rem 0.53125rem rgba(4, 9, 20, 0.05),
-    0 0.125rem 0.1875rem rgba(4, 9, 20, 0.03);
 }
 
 .view-detail-table-product {
@@ -82,32 +74,15 @@
     &:hover {
       color: $white-color;
       transform: scale(1.1);
-      box-shadow: 0 0.46875rem 2.1875rem rgba(4, 9, 20, 0.03),
-        0 0.9375rem 1.40625rem rgba(4, 9, 20, 0.03),
-        0 0.25rem 0.53125rem rgba(4, 9, 20, 0.05),
-        0 0.125rem 0.1875rem rgba(4, 9, 20, 0.03);
+      box-shadow: $box-shadow-light;
       transition: all 0.3s;
     }
   }
 }
 
-.table-wrapper {
-  box-shadow: 0 0.46875rem 2.1875rem rgba(4, 9, 20, 0.03),
-    0 0.9375rem 1.40625rem rgba(4, 9, 20, 0.03),
-    0 0.25rem 0.53125rem rgba(4, 9, 20, 0.05),
-    0 0.125rem 0.1875rem rgba(4, 9, 20, 0.03);
-}
-
 .table-messages-unread-and-user-active {
-  padding: 1rem !important;
-  background-color: $white-color;
-  box-shadow: 0 0.46875rem 2.1875rem rgba(4, 9, 20, 0.03),
-    0 0.9375rem 1.40625rem rgba(4, 9, 20, 0.03),
-    0 0.25rem 0.53125rem rgba(4, 9, 20, 0.05),
-    0 0.125rem 0.1875rem rgba(4, 9, 20, 0.03);
   margin-top: 2rem;
-  // .unread-messages-box {
-  //   height: 80 * 5px;
-  //   overflow-y: auto;
-  // }
+  .box-shadow-light.bg-white {
+    padding: 1rem !important;
+  }
 }
