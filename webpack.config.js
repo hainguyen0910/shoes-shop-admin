@@ -21,6 +21,7 @@ const VENDOR_LIBS = [
   'query-string',
   'react',
   'react-chartjs-2',
+  'react-custom-scrollbars',
   'react-dom',
   'react-redux',
   'react-router-dom',

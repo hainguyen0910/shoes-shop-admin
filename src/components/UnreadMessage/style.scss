@@ -1,0 +1,25 @@
+@import 'assets/styles/helpers/variables';
+
+.unread-message-wrapper {
+  height: 80px;
+  .img-avatar {
+    img {
+      width: 30px;
+      height: 30px;
+      border-radius: 5px;
+    }
+  }
+  .total-unread-message {
+    top: 0;
+    right: 0;
+  }
+  .username-message {
+    color: $text-color-1;
+    opacity: 0.8;
+    font-weight: bold;
+  }
+  .message-box {
+    color: $text-color-1;
+    opacity: 0.8;
+  }
+}
