@@ -16,6 +16,7 @@ import TableProduct from 'Components/TableProduct';
 import UnreadMessage from 'Components/UnreadMessage';
 import SingleBarRank from 'Components/SingleBarRank';
 import { Scrollbars } from 'react-custom-scrollbars';
+import { Table } from 'reactstrap';
 
 import React from 'react';
 import Select from 'react-select';
@@ -262,11 +263,105 @@ const messages = [
   },
 ];
 
+const top10Buyer = [
+  {
+    username: 'hainguyen0910',
+    fullname: 'Hải Nguyên',
+    totalOrders: 10,
+    totalProducts: 20,
+    totalPrice: '$ 13.000.000',
+  },
+  {
+    username: 'hainguyen0910',
+    fullname: 'Hải Nguyên',
+    totalOrders: 10,
+    totalProducts: 20,
+    totalPrice: '$ 13.000.000',
+  },
+  {
+    username: 'hainguyen0910',
+    fullname: 'Hải Nguyên',
+    totalOrders: 10,
+    totalProducts: 20,
+    totalPrice: '$ 13.000.000',
+  },
+  {
+    username: 'hainguyen0910',
+    fullname: 'Hải Nguyên',
+    totalOrders: 10,
+    totalProducts: 20,
+    totalPrice: '$ 13.000.000',
+  },
+  {
+    username: 'hainguyen0910',
+    fullname: 'Hải Nguyên',
+    totalOrders: 10,
+    totalProducts: 20,
+    totalPrice: '$ 13.000.000',
+  },
+  {
+    username: 'hainguyen0910',
+    fullname: 'Hải Nguyên',
+    totalOrders: 10,
+    totalProducts: 20,
+    totalPrice: '$ 13.000.000',
+  },
+  {
+    username: 'hainguyen0910',
+    fullname: 'Hải Nguyên',
+    totalOrders: 10,
+    totalProducts: 20,
+    totalPrice: '$ 13.000.000',
+  },
+  {
+    username: 'hainguyen0910',
+    fullname: 'Hải Nguyên',
+    totalOrders: 10,
+    totalProducts: 20,
+    totalPrice: '$ 13.000.000',
+  },
+  {
+    username: 'hainguyen0910',
+    fullname: 'Hải Nguyên',
+    totalOrders: 10,
+    totalProducts: 20,
+    totalPrice: '$ 13.000.000',
+  },
+  {
+    username: 'hainguyen0910',
+    fullname: 'Hải Nguyên',
+    totalOrders: 10,
+    totalProducts: 20,
+    totalPrice: '$ 13.000.000',
+  },
+];
+
 function index() {
   // const handleOnChangType = (selectedOption) => {};
 
+  const renderDataTableTopBuyer = (_data) => {
+    const newData = _data.filter((item, _index) => {
+      if (_index >= 3) return item;
+      return null;
+    });
+    let xhtml = null;
+    xhtml = newData.map((item, _index) => (
+      <tr key={_index} className={(_index + 1) % 2 !== 0 ? 'even' : ''}>
+        <th scope="row" className="text-center">
+          {_index + 4}
+        </th>
+        <td>{item.username}</td>
+        <td>{item.fullname}</td>
+        <td>{item.totalOrders}</td>
+        <td>{item.totalProducts}</td>
+        <td>{item.totalPrice}</td>
+      </tr>
+    ));
+    return xhtml;
+  };
+
   return (
-    <div>
+    <div className="overview-page">
       <PageTitle
         icon={portraitIcon}
         title="Overview"
@@ -481,7 +576,7 @@ function index() {
       </div>
 
       <div className="table-messages-unread-and-user-active d-flex">
-        <div className="w-50 box-shadow-light bg-white">
+        <div className="w-50 box-shadow-light bg-white h-50">
           <div className="mr-2 d-flex align-items-center justify-content-between">
             <span className="d-flex align-items-center">
               <span className="mr-2 title-chart-order">Unread Messages</span>
@@ -506,6 +601,14 @@ function index() {
                 <UnreadMessage data={item} key={_index} />
               ))}
             </Scrollbars>
+          </div>
+          <div className="d-flex justify-content-center mt-3">
+            <button
+              className="btn btn-view-detail d-flex align-items-center justify-content-center w-25"
+              type="button"
+            >
+              Go to Chats <i className="arrow right" />
+            </button>
           </div>
         </div>
 
@@ -554,6 +657,30 @@ function index() {
                 title="top 3"
                 count={8}
               />
+            </div>
+
+            <div className="top-10-buyer">
+              <Table>
+                <thead>
+                  <tr>
+                    <th className="text-center">TOP</th>
+                    <th>Username</th>
+                    <th>Full Name</th>
+                    <th>Total Orders</th>
+                    <th>Total Products</th>
+                    <th>Total Price</th>
+                  </tr>
+                </thead>
+                <tbody>{renderDataTableTopBuyer(top10Buyer)}</tbody>
+              </Table>
+              <div className="d-flex justify-content-end">
+                <button
+                  className="btn btn-view-detail d-flex align-items-center justify-content-center w-25"
+                  type="button"
+                >
+                  View detail <i className="arrow right" />
+                </button>
+              </div>
             </div>
           </div>
         </div>
